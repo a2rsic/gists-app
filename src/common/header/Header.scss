@@ -1,0 +1,29 @@
+$bg-color-dark: #1565c0;
+$text-color-white: white;
+
+.header-wrapper {
+  width: 98.98%;
+  padding: 10px;
+  background-color: $bg-color-dark;
+
+  .header {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-title {
+    display: inline;
+    color: $text-color-white;
+    letter-spacing: 1.2px;
+    margin-left: 10px;
+  }
+}
