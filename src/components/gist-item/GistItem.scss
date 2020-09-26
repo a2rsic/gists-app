@@ -1,0 +1,57 @@
+ul.item-container {
+  list-style-type: none;
+  li {
+    border-bottom: 1px solid #ccc;
+    img {
+      width: 120px;
+      margin-right: 7px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.darken {
+  filter: brightness(50%);
+}
+
+.clicked {
+  color: blue;
+  font-weight: 500;
+}
+
+//fade bonus part
+
+// .fade {
+//   text-align: center;
+//   animation: fadein 2s;
+//   -webkit-animation: fadein 2s;
+// }
+
+// @keyframes fadein {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// @-webkit-keyframes fadein {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
