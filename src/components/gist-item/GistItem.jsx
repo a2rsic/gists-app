@@ -18,9 +18,9 @@ const GistItem = ({ gist, loading }) => {
   const changeItemStyle = (e) => {
     e.preventDefault();
     setIsClicked(true);
-    // setTimeout(() => {
-
-    // }, 1000)
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 1000);
   };
 
   return (
@@ -28,7 +28,7 @@ const GistItem = ({ gist, loading }) => {
       <ul className="item-container">
         <li>
           <a href="#" onClick={changeItemStyle}>
-            <div className="item">
+            <div className={`item${isClicked ? " animation" : ""}`}>
               <img
                 className={isClicked ? `darken fade` : ""}
                 src={owner.avatar_url}
