@@ -6,6 +6,7 @@ import "./GistItem.scss";
 
 const GistItem = ({ gist, loading }) => {
   const [isClicked, setIsClicked] = useState(false);
+  const [isAnimation, setIsAnimation] = useState(false);
 
   const { owner, files } = gist;
 
@@ -18,6 +19,7 @@ const GistItem = ({ gist, loading }) => {
   const changeItemStyle = (e) => {
     e.preventDefault();
     setIsClicked(true);
+    setIsAnimation(true);
     setTimeout(() => {
       setIsClicked(false);
     }, 1000);
@@ -30,11 +32,11 @@ const GistItem = ({ gist, loading }) => {
           <a href="#" onClick={changeItemStyle}>
             <div className={`item${isClicked ? " animation" : ""}`}>
               <img
-                className={isClicked ? `darken fade` : ""}
+                className={isAnimation ? "darken" : ""}
                 src={owner.avatar_url}
                 alt="img"
               />
-              <span className={isClicked ? `clicked` : ""}>{file}</span>
+              <span className={isAnimation ? `clicked` : ""}>{file}</span>
             </div>
           </a>
         </li>
